@@ -1,0 +1,11 @@
+[ClassVersion("1.0.0.0"), FriendlyName("xSqlAlias")]
+class xSqlAlias : OMI_BaseResource
+{
+    [Key] string ServerAlias;
+    [Required] string ServerName;
+    [Write, ValueMap{"Present","Absent"}, Values{"Present","Absent"}] string Ensure;
+    [Write] Uint32 Port;
+    [Write, ValueMap{"32Bit","64Bit","Both"}, Values{"32Bit","64Bit","Both"}] string Architecture;
+    
+};
+
